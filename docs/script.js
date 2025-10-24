@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', revealSections);
     linkDistance: 120,
     linkOpacity: 0.12,
     size: [1, 2.2],
-    colors: ['#66a6ff', '#a78bfa', '#38bdf8', '#60a5fa']
+    colors: ['#7c3aed', '#a78bfa', '#c4b5fd', '#6d28d9']
   };
 
   function resize() {
@@ -89,7 +89,7 @@ window.addEventListener('DOMContentLoaded', revealSections);
         const maxD2 = CONFIG.linkDistance * CONFIG.linkDistance;
         if (d2 < maxD2) {
           const alpha = CONFIG.linkOpacity * (1 - d2 / maxD2);
-          ctx.strokeStyle = `rgba(148, 163, 184, ${alpha})`;
+          ctx.strokeStyle = `rgba(196, 181, 253, ${alpha})`; // light purple lines
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(p1.x, p1.y);

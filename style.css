@@ -18,7 +18,11 @@ body {
 
 a {
   text-decoration: none;
-  color: #007bff;
+  color: #c4b5fd; /* light purple links */
+  transition: color .2s ease;
+}
+a:hover, a:focus {
+  color: #e9d5ff; /* lighter on hover */
 }
 
 /* Header */
@@ -64,29 +68,32 @@ header p {
 .role-figma { color: #f472b6; }
 
 header .btn {
-  background: white;
-  color: #2575fc;
+  background: linear-gradient(90deg, #6d28d9, #7c3aed, #a78bfa);
+  color: #fff;
   padding: 10px 20px;
   border-radius: 25px;
   font-weight: bold;
-  transition: 0.3s;
+  border: 1px solid rgba(196, 181, 253, 0.55);
+  box-shadow: 0 8px 18px rgba(109, 40, 217, 0.35);
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
 }
 
 header .btn:hover {
-  background: #fff;
-  color: #6a11cb;
   transform: scale(1.05);
+  background: linear-gradient(90deg, #7c3aed, #a78bfa, #c4b5fd);
+  box-shadow: 0 12px 28px rgba(167, 139, 250, 0.55);
 }
 
 header .btn.secondary {
   background: transparent;
-  color: #2575fc;
-  border: 2px solid rgba(37,117,252,0.8);
+  color: #c4b5fd;
+  border: 2px solid rgba(196,181,253,0.6);
   margin-left: 10px;
 }
 header .btn.secondary:hover {
   color: #fff;
-  background: #2575fc;
+  background: linear-gradient(90deg, #6d28d9, #7c3aed, #a78bfa);
+  border-color: transparent;
 }
 
 /* Sections */
@@ -143,8 +150,9 @@ section.show { opacity: 1; transform: none; }
 
 .project-card {
   position: relative;
-  background: rgba(17, 24, 39, 0.6); /* slate-900 with transparency */
-  border: 1px solid rgba(148, 163, 184, 0.15); /* slate-400 */
+  /* Purple-tinted glass to match dark purple theme */
+  background: rgba(45, 22, 82, 0.6);
+  border: 1px solid rgba(167, 139, 250, 0.18);
   border-radius: 14px;
   padding: 24px;
   width: min(900px, 100%);
@@ -161,7 +169,7 @@ section.show { opacity: 1; transform: none; }
   top: 0;
   bottom: 0;
   width: 4px;
-  background: linear-gradient(180deg, #60a5fa, #a78bfa, #22d3ee);
+  background: linear-gradient(180deg, #a78bfa, #7c3aed, #6d28d9);
   opacity: .9;
   transition: width .25s ease;
 }
@@ -172,24 +180,24 @@ section.show { opacity: 1; transform: none; }
   top: -120px;
   width: 240px;
   height: 240px;
-  background: radial-gradient(closest-side, rgba(99,102,241,0.12), transparent 65%);
+  background: radial-gradient(closest-side, rgba(167,139,250,0.15), transparent 65%);
   pointer-events: none;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(0,0,0,0.35);
-  border-color: rgba(148, 163, 184, 0.25);
+  border-color: rgba(167, 139, 250, 0.35);
 }
 .project-card:hover::before { width: 10px; }
 
 .project-card.featured { width: min(900px, 100%); }
 .project-card .project-subtitle {
-  color: #cbd5e1;
+  color: #ddd6fe; /* softer light purple for subtitles */
   margin-top: -8px;
 }
 .project-card h3 { color: #e2e8f0; margin-top: 0; position: relative; }
-.project-card p { color: #cbd5e1; }
+.project-card p { color: #e2e8f0; }
 /* Top-right corner angled strip */
 .project-card h3::after {
   content: '';
@@ -198,7 +206,7 @@ section.show { opacity: 1; transform: none; }
   right: -18px;
   width: 88px;
   height: 26px;
-  background: linear-gradient(90deg, #2563eb, #7c3aed, #22d3ee);
+  background: linear-gradient(90deg, #6d28d9, #7c3aed, #a78bfa);
   transform: rotate(45deg);
   opacity: 0.6;
   filter: blur(0.2px);
@@ -219,7 +227,7 @@ section.show { opacity: 1; transform: none; }
 }
 .project-cta {
   display: inline-block;
-  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  background: linear-gradient(90deg, #6d28d9, #7c3aed, #a78bfa);
   color: #fff;
   padding: 10px 14px;
   border-radius: 10px;
@@ -227,8 +235,8 @@ section.show { opacity: 1; transform: none; }
 }
 .project-cta.ghost {
   background: transparent;
-  color: #93c5fd;
-  border: 1px solid rgba(147,197,253,0.4);
+  color: #c4b5fd;
+  border: 1px solid rgba(196,181,253,0.5);
 }
 
 /* Project thumbnails */
@@ -292,8 +300,16 @@ footer {
 }
 .social-links a:hover {
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(167,139,250,0.28);
 }
 
+
+/* Featured card subtle inner glow */
+.project-card.featured:hover {
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35),
+              inset 0 0 0 1px rgba(196, 181, 253, 0.35),
+              inset 0 0 30px rgba(124, 58, 237, 0.2);
+}
 /* Responsive */
 @media(max-width: 768px) {
   .projects-container {
