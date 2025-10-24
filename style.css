@@ -2,11 +2,9 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  /* Dark, subtle gradient base similar to particle backgrounds */
-  background: radial-gradient(1200px 800px at 10% 10%, #131a2b, transparent 55%),
-              radial-gradient(900px 700px at 90% 20%, #0f1628, transparent 50%),
-              linear-gradient(180deg, #0b1020 0%, #0a0f1a 100%);
-  color: #e5e7eb; /* light text by default on dark */
+  /* Light cream + white gradient background */
+  background: linear-gradient(180deg, #fff8ea 0%, #ffffff 100%);
+  color: #333; /* dark text for light background */
   line-height: 1.6;
 }
 
@@ -26,7 +24,7 @@ a {
 /* Header */
 header {
   background: transparent;
-  color: white;
+  color: #222;
   text-align: center;
   padding: 100px 20px;
 }
@@ -82,18 +80,18 @@ header .btn:hover {
 
 header .btn.secondary {
   background: transparent;
-  color: #fff;
-  border: 2px solid rgba(255,255,255,0.8);
+  color: #2575fc;
+  border: 2px solid rgba(37,117,252,0.8);
   margin-left: 10px;
 }
 header .btn.secondary:hover {
-  color: #2575fc;
-  background: #fff;
+  color: #fff;
+  background: #2575fc;
 }
 
 /* Sections */
 section {
-  padding: 60px 20px;
+  padding: 28px 20px; /* further reduced base padding */
   text-align: center;
 }
 /* Ensure content sits above canvas */
@@ -104,8 +102,21 @@ section h2 {
   margin-bottom: 20px;
 }
 
+/* Reduce spacing between consecutive sections globally */
+section + section { padding-top: 8px; }
+section:not(:last-of-type) { padding-bottom: 12px; }
+
+/* Remove extra outer margins from first/last child within sections */
+section > *:first-child { margin-top: 0; }
+section > *:last-child { margin-bottom: 0; }
+
 /* Intro content */
-#intro p { max-width: 900px; margin: 0 auto 10px; line-height: 1.9; }
+#intro p { max-width: 900px; margin: 0 auto 6px; line-height: 1.9; }
+
+/* Tighter spacing specifically for the first three sections */
+#about, #intro, #skills { padding-top: 16px; padding-bottom: 16px; }
+#about h2, #intro h2, #skills h2 { margin-bottom: 10px; }
+#about p { margin-bottom: 8px; }
 
 /* Scroll reveal */
 html { scroll-behavior: smooth; }
@@ -190,20 +201,6 @@ section.show { opacity: 1; transform: none; }
 }
 .project-card h3 { color: #e2e8f0; margin-top: 0; }
 .project-card p { color: #cbd5e1; }
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 12px 0 6px;
-}
-.tag {
-  background: rgba(148,163,184,0.15);
-  color: #cbd5e1;
-  font-weight: 600;
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-size: .85rem;
-}
 .project-ctas {
   display: flex;
   gap: 10px;
