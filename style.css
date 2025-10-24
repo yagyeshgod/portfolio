@@ -94,6 +94,52 @@ section.show { opacity: 1; transform: none; }
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
+.project-card.featured {
+  width: min(900px, 100%);
+  text-align: left;
+}
+.project-card .project-subtitle {
+  color: #555;
+  margin-top: -8px;
+}
+.project-details ul {
+  padding-left: 18px;
+  margin: 12px 0;
+  list-style: disc;
+}
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 6px;
+}
+.tag {
+  background: #f0f3ff;
+  color: #3a53d6;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: .85rem;
+}
+.project-ctas {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.project-cta {
+  display: inline-block;
+  background: #2575fc;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.project-cta.ghost {
+  background: #eef3ff;
+  color: #1b3a8a;
+}
+
 /* Skills */
 .skills-list {
   display: flex;
