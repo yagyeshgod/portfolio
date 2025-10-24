@@ -10,10 +10,13 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body>
+  <canvas id="bg-particles" aria-hidden="true"></canvas>
   <!-- Header -->
   <header>
-    <h1>Hi, I'm Yagya 👋</h1>
-    <p>Web Designer & Developer</p>
+    <h1>Hi, I am Yagya</h1>
+    <p class="hero-typed">
+      <span id="typed-role" aria-live="polite"></span>
+    </p>
     <a href="#projects" class="btn">View My Work</a>
     <a href="resume/Yagya-Resume.pdf" class="btn secondary" target="_blank" rel="noopener" download>Download Resume</a>
   </header>
@@ -21,7 +24,14 @@
   <!-- About Me -->
   <section id="about">
     <h2>About Me</h2>
-    <p>I build modern, responsive websites with a focus on UI/UX and performance.</p>
+    <p>I design clean, user‑friendly web interfaces with Figma and modern HTML/CSS.</p>
+  </section>
+
+  <!-- Intro -->
+  <section id="intro">
+    <h2>LET ME INTRODUCE MYSELF</h2>
+    <p>I'm a UI/UX‑focused web designer and front‑end developer who turns ideas into clear, intuitive experiences. I work in Figma to create wireframes, design systems, and interactive prototypes, and I use Envato assets where helpful to speed up high‑quality visuals. I communicate concepts with polished PPT decks and ship accessible, responsive interfaces using semantic HTML and modern CSS with thoughtful typography, color, and micro‑interactions.</p>
+    <p>Skills: Figma, PPT, Envato, strong HTML & CSS. I collaborate with teams to design customer portals and web UIs. While I don’t work inside ServiceNow itself, I focus on the web development and UI/UX that make those portals easy and enjoyable to use.</p>
   </section>
 
   <!-- Skills -->
@@ -44,6 +54,7 @@
     <h2>My Projects</h2>
     <div class="projects-container">
       <div class="project-card featured">
+        <img class="project-thumb" src="thumbs/demandvitals.svg" alt="DemandVitals website preview">
         <h3>DemandVitals — Integrated Brand + Demand Marketing Website</h3>
         <p class="project-subtitle">A content-rich marketing site for B2B Tech/SaaS that explains how to build a modern demand engine by balancing long-term brand with short-term demand activation.</p>
         <div class="project-details">
@@ -70,11 +81,13 @@
         </div>
       </div>
       <div class="project-card">
+        <img class="project-thumb" src="thumbs/portfolio.svg" alt="Portfolio website preview">
         <h3>Portfolio Website</h3>
         <p>My personal portfolio built with HTML, CSS & JS.</p>
         <a href="#" target="_blank">View Project</a>
       </div>
       <div class="project-card">
+        <img class="project-thumb" src="thumbs/react-app.svg" alt="React app preview">
         <h3>React App</h3>
         <p>Dynamic app using React and Tailwind CSS.</p>
         <a href="#" target="_blank">View Project</a>
