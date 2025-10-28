@@ -233,11 +233,6 @@ section.show { opacity: 1; transform: none; }
   border-radius: 10px;
   font-weight: 700;
 }
-.project-cta.ghost {
-  background: transparent;
-  color: #c4b5fd;
-  border: 1px solid rgba(196,181,253,0.5);
-}
 
 /* Project thumbnails */
 .project-thumb {
