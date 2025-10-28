@@ -133,7 +133,7 @@ section > *:last-child { margin-bottom: 0; }
 /* Tighter spacing specifically for the first three sections */
 #about, #intro, #skills { padding-top: 16px; padding-bottom: 16px; }
 #about h2, #intro h2, #skills h2 { margin-bottom: 10px; }
-#about p { margin-bottom: 8px; }
+#about p { max-width: 900px; margin: 0 auto 8px; }
 
 /* Scroll reveal */
 html { scroll-behavior: smooth; }
